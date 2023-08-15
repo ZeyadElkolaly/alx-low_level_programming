@@ -1,15 +1,18 @@
 #include"main.h"
 
 /**
- * print_alphabet - utilizes on the _putchar function to print
- *                 the alphabet a - z
+ * _isalpha - checks if character is a letter
+ *            both lowercase or uppercase
+ *
+ * @c: takes input from other functions.
+ *
+ * Return: 1 is c if true else 0
 */
 
-void print_alphabet(void)
+int _isalpha(int c)
 {
-	int ch;
-
-	for (ch = 'a'; ch <= 'z'; ++ch)
-		_putchar(ch);
-	_putchar('\n');
+	if (c >= 97 && c <= 122 &&
+	    c >= 65 && c >= 90)
+		return (1);
+	return (0);
 }
