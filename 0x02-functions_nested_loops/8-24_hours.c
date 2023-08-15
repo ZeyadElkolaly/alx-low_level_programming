@@ -1,30 +1,23 @@
 #include"main.h"
 
 /**
- * print_sign - print + if n is greater than zero,
- *             0 if n is zero and - if n is less
- *             than zero.
- *
- * @n: takes integer type input for function.
- *
- * Return: 1 if +, 0 if 0 and -1 if -
+ * jack_bauer- prints every minute of the day
 */
 
-int print_sign(int n)
+void jack_bauer(void)
 {
-	if (n > 0)
+	int min, hr;
+
+	for (hr = 0; hr <= 23; ++hr)
 	{
-		_putchar(43 + 0);
-		return (1);
-	}
-	else if (n == 0)
-	{
-		_putchar(0 + 48);
-		return (0);
-	}
-	else
-	{
-		_putchar(45 + 0);
-		return (-1);
+		for (min = 0; min <= 59; ++min)
+		{
+			_putchar((hr / 10) + 48);
+			_putchar((hr % 10) + 48);
+			_putchar(':');
+			_putchar((min / 10) + 48);
+			_putchar((min % 10) + 48);
+			_putchar('\n');
+		}
 	}
 }
