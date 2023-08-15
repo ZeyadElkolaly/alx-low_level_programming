@@ -1,30 +1,39 @@
 #include"main.h"
 
 /**
- * print_sign - print + if n is greater than zero,
- *             0 if n is zero and - if n is less
- *             than zero.
+ * times_table - prints the 9 times table
  *
- * @n: takes integer type input for function.
+ * Example Table
+ * 0, 0, 0, 0, ..
+ * 0, 1, 2, 3, ..
  *
- * Return: 1 if +, 0 if 0 and -1 if -
 */
 
-int print_sign(int n)
+void times_table(void)
 {
-	if (n > 0)
+	int num, mult, prod;
+
+	for (num = 0; num <= 9; ++num)
 	{
-		_putchar(43 + 0);
-		return (1);
-	}
-	else if (n == 0)
-	{
-		_putchar(0 + 48);
-		return (0);
-	}
-	else
-	{
-		_putchar(45 + 0);
-		return (-1);
+		_putchar(48);
+		for (mult = 1; mult <= 9; ++mult)
+		{
+			_putchar(',');
+			_putchar(' ');
+
+			prod = num * mult;
+
+			/*
+			 * put space if product is a single number
+			 * place the first digit if its two numbers
+			*/
+			if (prod <= 9)
+				_putchar(' ');
+			else
+				_putchar((prod / 10) + 48); /*get the first digit*/
+
+			_putchar((prod % 10) + 48); /*get the second digit*/
+		}
+		_putchar('\n');
 	}
 }
