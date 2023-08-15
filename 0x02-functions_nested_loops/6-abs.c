@@ -1,18 +1,17 @@
 #include"main.h"
 
 /**
- * _isalpha - checks if character is a letter
- *            both lowercase or uppercase
+ * _abs - function that computes the absolute
+ *       value of an integer
  *
- * @c: takes input from other functions.
+ * @n: takes in integer type input for function
  *
- * Return: 1 is c if true else 0
+ * Return: Always 0 (Success)
 */
 
-int _isalpha(int c)
+int _abs(int n)
 {
-	if (c >= 97 && c <= 122 &&
-	    c >= 65 && c >= 90)
-		return (1);
-	return (0);
+	if (n < 0)
+		n = (-1) * n;
+	return (n);
 }
