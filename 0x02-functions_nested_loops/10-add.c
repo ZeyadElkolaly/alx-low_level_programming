@@ -1,15 +1,17 @@
 #include"main.h"
 
 /**
- * print_alphabet - utilizes on the _putchar function to print
- *                 the alphabet a - z
+ * add - add two integers
+ *
+ * @a: first input
+ * @b: second input
+ *
+ * Return: sum of a & b
 */
 
-void print_alphabet(void)
+int add(int a, int b)
 {
-	int ch;
+	int sum = a + b;
 
-	for (ch = 'a'; ch <= 'z'; ++ch)
-		_putchar(ch);
-	_putchar('\n');
+	return (sum);
 }
