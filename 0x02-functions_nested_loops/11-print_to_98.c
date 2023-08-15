@@ -1,15 +1,23 @@
 #include"main.h"
 
 /**
- * print_alphabet - utilizes on the _putchar function to print
- *                 the alphabet a - z
+ * print_to_98 - print n to 98 counts
+ *           separated by comma, followed
+ *           by space and number should be
+ *           printed in order
+ *
+ * @n: input
 */
 
-void print_alphabet(void)
+void print_to_98(int n)
 {
-	int ch;
+	int count;
 
-	for (ch = 'a'; ch <= 'z'; ++ch)
-		_putchar(ch);
-	_putchar('\n');
+	if (n > 98)
+		for (count = n; count > 98; --count)
+			printf("%d, ", count);
+	else
+		for (count = n; count < 98; ++count)
+			printf("%d, ", count);
+	printf("98\n");
 }
